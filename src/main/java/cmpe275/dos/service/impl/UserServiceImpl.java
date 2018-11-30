@@ -4,6 +4,7 @@ import cmpe275.dos.dao.UserDao;
 import cmpe275.dos.dto.ParamCreateUserDto;
 import cmpe275.dos.dto.ParamLoginDto;
 import cmpe275.dos.dto.UserDto;
+import cmpe275.dos.dto.UserSimpleDto;
 import cmpe275.dos.entity.User;
 import cmpe275.dos.exception.AppException;
 import cmpe275.dos.lib.Validate;
@@ -12,9 +13,13 @@ import cmpe275.dos.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 import static cmpe275.dos.exception.ErrorCode.ERR_INVALID_ZIPCODE;
 
@@ -84,8 +89,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Page<User> getAllUsers(Pageable pageable) {
+    public Page<UserSimpleDto> getAllUsers(Pageable pageable) {
         Page<User> users = userDao.findAllBy(pageable);
-        return users;
+        return new PageImpl<>(
+                StreamSupport.stream(users.spliterator(), false)
+                        .map(userMapper::toSimpleDto).collect(Collectors.toList()), pageable, users.getTotalElements());
     }
 }

@@ -3,6 +3,7 @@ package cmpe275.dos.service;
 import cmpe275.dos.dto.ParamCreateUserDto;
 import cmpe275.dos.dto.ParamLoginDto;
 import cmpe275.dos.dto.UserDto;
+import cmpe275.dos.dto.UserSimpleDto;
 import cmpe275.dos.exception.AppException;
 import org.springframework.data.domain.Page;
 import cmpe275.dos.entity.User;
@@ -22,5 +23,5 @@ public interface UserService {
 
     UserDto loginUser(ParamLoginDto paramLogin);
 
-    Page<User> getAllUsers(Pageable pageable);
+    Page<UserSimpleDto> getAllUsers(Pageable pageable);
 }
