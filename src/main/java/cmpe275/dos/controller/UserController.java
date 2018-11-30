@@ -34,7 +34,7 @@ public class UserController extends AbstractController {
                             "Default sort order is ascending. " +
                             "Multiple sort criteria are supported.")
     })
-    @GetMapping(USER + "S")
+    @GetMapping(USER + "s")
     public Page<User> getUser(Pageable pageable) {
         return userService.getAllUsers(pageable);
     }
