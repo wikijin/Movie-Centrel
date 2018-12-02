@@ -9,4 +9,5 @@ public interface UrlConstant {
     String MOVIE = "/movie";
     String MOVIES = "/movies";
     String MOVIE_ID = "/movie/{movieId}";
+    String SEARCH_MOVIES = "/search-movies/{pattern}";
 }

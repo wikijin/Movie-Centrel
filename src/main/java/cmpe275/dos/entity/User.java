@@ -42,7 +42,7 @@ public class User implements Serializable {
 
     private Integer role = 1;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM", timezone="US/Pacific")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date subexpiredate;
 
 
@@ -133,7 +133,7 @@ public class User implements Serializable {
     public Date getSubexpiredate() {
         return subexpiredate;
     }
-
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     public void setSubexpiredate(Date subexpiredate) {
         this.subexpiredate = subexpiredate;
     }
