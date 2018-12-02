@@ -37,6 +37,8 @@ public class MovieMapperImpl extends GenericMapper implements MovieMapper {
         updateValue(pojo::setMovieTitle, dto.getMovieTitle());
         updateValue(pojo::setReleaseDate, dto.getReleaseDate());
         updateValue(pojo::setTrailerUrl, dto.getTrailerUrl());
+        updateValue(pojo::setMovie_type, dto.getMovie_type());
+
         return pojo;
     }
 }

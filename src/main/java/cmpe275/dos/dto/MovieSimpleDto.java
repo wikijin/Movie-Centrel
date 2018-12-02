@@ -34,6 +34,16 @@ public class MovieSimpleDto implements Serializable{
 
     private Integer length;
 
+    private Integer movie_type;
+
+    public Integer getMovie_type() {
+        return movie_type;
+    }
+
+    public void setMovie_type(Integer movie_type) {
+        this.movie_type = movie_type;
+    }
+
     public Integer getMovieId() {
         return movieId;
     }
