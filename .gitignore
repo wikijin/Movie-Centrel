@@ -24,7 +24,7 @@
 /nbdist/
 /.nb-gradle/
 
-resources/
+
 .DS_Store
 
 mvnw.cmd
