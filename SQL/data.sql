@@ -78,7 +78,13 @@ insert into MOVIE_CHARACTER (movie_id, character_name) values (1, 'Melinda Tomse
 insert into MOVIE_CHARACTER (movie_id, character_name) values (7, 'Kristi Gores');
 insert into MOVIE_CHARACTER (movie_id, character_name) values (7, 'Sula Johanning');
 
-
-
+insert into MOVIE_GENRE (movie_id, genre_id) values (1, 10);
+insert into MOVIE_GENRE (movie_id, genre_id) values (1, 13);
+insert into MOVIE_GENRE (movie_id, genre_id) values (1, 3);
+insert into MOVIE_GENRE (movie_id, genre_id) values (1, 7);
+insert into MOVIE_GENRE (movie_id, genre_id) values (1, 9);
+insert into MOVIE_GENRE (movie_id, genre_id) values (10, 2);
+insert into MOVIE_GENRE (movie_id, genre_id) values (10, 3);
+insert into MOVIE_GENRE (movie_id, genre_id) values (10, 5);
 
   

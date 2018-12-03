@@ -18,4 +18,9 @@ public interface UrlConstant {
     String GENRES = "/genres";
     String MOVIE_GENRE = "/movie-genre";
     String MOVIE_GENRE_MOVIEID = "/movie-genre/{movieId}";
+
+    String MOVIE_REVIEW = "/movie-review";
+    String MOVIE_REVIEW_USER_REVIEWID = "/movie-review/{userId}/{reviewId}";
+    String MOVIE_REVIEWID = "/movie-review/{reviewId}";
+    String MOVIE_REVIEWS = "/movie-reviews";
 }

@@ -102,3 +102,12 @@ CREATE TABLE MOVIE_HISTORY
   FOREIGN KEY (movie_id) REFERENCES MOVIE(movie_id)
 );
 
+CREATE TABLE MOVIE_ORDER
+(
+  movie_order_id INTEGER PRIMARY KEY AUTO_INCREMENT,
+  movie_id INTEGER,
+  user_id INTEGER,
+  FOREIGN KEY (user_id) REFERENCES USER(user_id),
+  FOREIGN KEY (movie_id) REFERENCES MOVIE(movie_id),
+  UNIQUE movie_order_uniq (user_id, movie_id)
+);

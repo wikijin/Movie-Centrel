@@ -13,6 +13,16 @@ public class ParamCreateUserDto implements Serializable {
 
     private String email;
 
+    private Integer role;
+
+    public Integer getRole() {
+        return role;
+    }
+
+    public void setRole(Integer role) {
+        this.role = role;
+    }
+
     public String getUsername() {
         return username;
     }
