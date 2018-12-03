@@ -58,6 +58,27 @@ INSERT INTO `MOVIE` VALUES (1,'Kids for Cash',
  lectus.','https://www.youtube.com/embed/KhKpA7LQlUA','https://image.ibb.co/crmjTc/37.jpg','2018-05-04',2,'PG',106,5.0,3.8,'STXfilms','Pakistan',1),
 (10,'Memphis Belle: A Story of a Flying Fortress, The','Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.',
   'https://www.youtube.com/embed/5WWC0GTP08w','https://image.ibb.co/cY3ngx/16.jpg','2018-01-14',1,'G',115,5.0,4.7,'Gaumount Film Company','Iran',1);
-  
-  
+
+insert into MOVIE_CHARACTER (movie_id, character_name) values (1, 'Beauregard Teal');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (2, 'Harmonia Storck');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (2, 'Persis Wilman');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (3, 'Thorpe Edgeley');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (4, 'Dave Drezzer');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (3, 'Antone Pershouse');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (3, 'Sabra Le Franc');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (3, 'Elias Costellow');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (3, 'Arlana D''Ambrosi');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (3, 'Web Balham');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (2, 'Deeanne Parsonson');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (1, 'Lionello Lemon');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (1, 'Harwell Keohane');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (1, 'Falkner Swanborough');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (1, 'Rozalie Reinbach');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (1, 'Melinda Tomsen');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (7, 'Kristi Gores');
+insert into MOVIE_CHARACTER (movie_id, character_name) values (7, 'Sula Johanning');
+
+
+
+
   

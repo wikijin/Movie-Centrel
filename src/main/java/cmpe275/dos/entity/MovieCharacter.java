@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class MovieCharacter implements Serializable{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "character_id")
     private Integer characterId;
 
