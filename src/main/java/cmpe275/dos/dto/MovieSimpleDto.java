@@ -36,6 +36,26 @@ public class MovieSimpleDto implements Serializable{
 
     private Integer movie_type;
 
+    private String Studio;
+
+    public String getStudio() {
+        return Studio;
+    }
+
+    public void setStudio(String studio) {
+        Studio = studio;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    private String country;
+
     public Integer getMovie_type() {
         return movie_type;
     }

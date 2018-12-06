@@ -1,14 +1,19 @@
 package cmpe275.dos.service.impl;
 
+import cmpe275.dos.dao.MovieCharacterDao;
 import cmpe275.dos.dao.MovieDao;
 import cmpe275.dos.dao.MpaaRatingDao;
 import cmpe275.dos.dto.MovieDto;
 import cmpe275.dos.dto.MovieSimpleDto;
 import cmpe275.dos.entity.Movie;
+import cmpe275.dos.entity.MovieCharacter;
 import cmpe275.dos.entity.MpaaRating;
 import cmpe275.dos.mapper.MovieMapper;
+import cmpe275.dos.service.MovieCharacterService;
 import cmpe275.dos.service.MovieService;
 import cmpe275.dos.service.UserService;
+
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -28,6 +33,9 @@ public class MovieServiceImpl implements MovieService {
 
     @Autowired
     MovieMapper movieMapper;
+
+    @Autowired
+    private MovieCharacterDao movieCharacterDao;
 
     @Override
     public MovieSimpleDto CreateMovie(MovieSimpleDto movieSimpleDto) {
@@ -92,5 +100,18 @@ public class MovieServiceImpl implements MovieService {
         return new PageImpl<>(StreamSupport
                 .stream(movies.spliterator(), false)
                 .map(movieMapper::toSimpleDto).collect(Collectors.toList()), pageable, movies.getTotalElements());
+    }
+
+    @Override
+    public Boolean deleteMovie(Integer movieId) {
+        if (movieDao.findMoviesByMovieId(movieId) == null) {
+            return false;
+        }
+        List<MovieCharacter> movieCharacterList = movieCharacterDao.findAllByMovieId(movieId);
+        for (MovieCharacter movieCharacter : movieCharacterList) {
+            movieCharacterDao.delete(movieCharacter);
+        }
+        movieDao.deleteById(movieId);
+        return true;
     }
 }

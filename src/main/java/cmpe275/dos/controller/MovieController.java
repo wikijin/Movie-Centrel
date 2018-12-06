@@ -17,7 +17,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import static cmpe275.dos.constant.JsonConstant.KEY_MOVIE;
+import static cmpe275.dos.constant.JsonConstant.KEY_USER;
 import static cmpe275.dos.constant.UrlConstant.*;
 
 @RestController
@@ -103,5 +106,13 @@ public class MovieController extends AbstractController {
     @GetMapping(SEARCH_MOVIES)
     public Page<MovieSimpleDto> getMovies(@PathVariable String pattern, Pageable pageable) {
         return movieService.searchMoviesByPattern(pattern, pageable);
+    }
+
+    @ApiOperation(value = "Delete Movie [Topic: users]", response = JsonResponse.class)
+    @DeleteMapping(MOVIE_ID)
+    public ResponseEntity<JsonResponse> DeleteMovie(@PathVariable Integer movieId){
+        if (movieService.deleteMovie(movieId))
+            return success(KEY_MOVIE, "deleted");
+        return notFound();
     }
 }
