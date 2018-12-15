@@ -99,7 +99,8 @@ CREATE TABLE MOVIE_HISTORY
   user_id INTEGER,
   history_date DATE,
   FOREIGN KEY (user_id) REFERENCES USER(user_id),
-  FOREIGN KEY (movie_id) REFERENCES MOVIE(movie_id)
+  FOREIGN KEY (movie_id) REFERENCES MOVIE(movie_id),
+  UNIQUE history_id (movie_id, user_id)
 );
 
 CREATE TABLE MOVIE_ORDER

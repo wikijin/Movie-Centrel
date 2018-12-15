@@ -23,4 +23,7 @@ public interface UrlConstant {
     String MOVIE_REVIEW_USER_REVIEWID = "/movie-review/{userId}/{reviewId}";
     String MOVIE_REVIEWID = "/movie-review/{reviewId}";
     String MOVIE_REVIEWS = "/movie-reviews";
+
+    String MOVIE_HISTORY = "/movie-history";
+    String MOVIE_HISTORY_USERID = "/movie-history/{userId}";
 }

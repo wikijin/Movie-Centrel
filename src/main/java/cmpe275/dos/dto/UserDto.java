@@ -34,7 +34,7 @@ public class UserDto implements Serializable {
 
     private Integer role;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM", timezone="US/Pacific")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone="US/Pacific")
     private Date subexpiredate;
 
     public Integer getUserId() {

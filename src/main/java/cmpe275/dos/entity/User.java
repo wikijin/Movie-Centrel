@@ -45,6 +45,20 @@ public class User implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date subexpiredate;
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name="MOVIE_HISTORY",
+            joinColumns = @JoinColumn(name="user_id", referencedColumnName = "user_id"),
+            inverseJoinColumns = @JoinColumn(name="movie_id", referencedColumnName = "movie_id"))
+    @JsonIgnore
+    private List<Movie> movies;
+
+    public List<Movie> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(List<Movie> movies) {
+        this.movies = movies;
+    }
 
     public Integer getUserId() {
         return userId;

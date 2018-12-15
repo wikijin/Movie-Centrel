@@ -1,5 +1,6 @@
 package cmpe275.dos.dao;
 
+import cmpe275.dos.entity.MovieHistory;
 import cmpe275.dos.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

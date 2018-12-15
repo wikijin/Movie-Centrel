@@ -87,4 +87,28 @@ insert into MOVIE_GENRE (movie_id, genre_id) values (10, 2);
 insert into MOVIE_GENRE (movie_id, genre_id) values (10, 3);
 insert into MOVIE_GENRE (movie_id, genre_id) values (10, 5);
 
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (1, 3, 3, '2018-12-07');
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (2, 2, 3, '2018-12-13');
+
+
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (4, 2, 1, '2018-12-02');
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (5, 2, 4, '2018-12-01');
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (6, 1, 5, '2018-12-15');
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (7, 2, 4, '2018-12-13');
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (8, 2, 1, '2018-12-16');
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (9, 4, 2, '2018-12-08');
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (10, 1, 3, '2018-12-06');
+
+INSERT INTO MOVIE_HISTORY (`history_id`, `movie_id`, `user_id`, `history_date`) VALUES (10, 2, 3, '2018-12-05');
+
+
+
   

@@ -59,6 +59,13 @@ public class Movie implements Serializable {
     @JsonIgnore
     private List<Genre> genres;
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name="MOVIE_HISTORY",
+            joinColumns = @JoinColumn(name="movie_id", referencedColumnName = "movie_id"),
+            inverseJoinColumns = @JoinColumn(name="user_id", referencedColumnName = "user_id"))
+    @JsonIgnore
+    private List<User> users;
+
     @OneToMany(mappedBy = "movie")
     @JsonIgnore
     private List<MovieCharacter> characters;
@@ -66,6 +73,14 @@ public class Movie implements Serializable {
     @OneToMany(mappedBy = "movie")
     @JsonIgnore
     private List<MovieDirector> directors;
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
 
     public List<Genre> getGenres() {
         return genres;

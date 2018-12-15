@@ -16,4 +16,5 @@ public interface JsonConstant {
     String KEY_CONTENT = "content";
 
     String KEY_MOVIE_REVIEW = "Review";
+    String KEY_MOVIE_HISTORY = "History";
 }

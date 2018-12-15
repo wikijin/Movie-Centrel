@@ -18,4 +18,5 @@ public interface MovieDao extends PagingAndSortingRepository<Movie, Integer> {
     Page<Movie> searchMoviesByPattern(@Param("pattern") String pattern, Pageable pageable);
 
     Movie findMoviesByMovieId(Integer movieId);
+
 }
